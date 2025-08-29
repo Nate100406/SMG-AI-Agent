@@ -1,16 +1,18 @@
-<script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '68b00f4f09a75668c7856077' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          voice: {
-            url: "https://runtime-api.voiceflow.com"
-          }
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
+<script src="https://cdn.voiceflow.com/widget/bundle.mjs" type="module"></script>
+
+<script type="module">
+  window.voiceflow.chat.load({
+    verify: { projectID: 'YOUR_PROJECT_ID' },  // Interfaces → Widget panel
+    versionID: 'production',                   // or 'development'
+    url: 'https://general-runtime.voiceflow.com',
+    assistant: {
+      type: 'chat',
+      renderMode: 'widget'
+    }
+  });
 </script>
+
+<!-- Your own brand note directly on the page -->
+<div style="font:11px/1 Arial, sans-serif; color:#888; text-align:right; margin-top:4px;">
+  Powered&nbsp;by&nbsp;Méllon
+</div>
